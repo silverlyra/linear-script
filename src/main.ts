@@ -1,19 +1,14 @@
-import * as core from '@actions/core'
-import {wait} from './wait'
+import {LinearClient} from '@linear/sdk'
+import {core, run} from 'github-script-action'
 
-async function run(): Promise<void> {
-  try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+async function main(): Promise<void> {
+  const token = core.getInput('linear-token', {required: true})
+  const auth = token.startsWith('lin_api_')
+    ? {apiKey: token}
+    : {accessToken: token}
+  const linear = new LinearClient(auth)
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
-
-    core.setOutput('time', new Date().toTimeString())
-  } catch (error) {
-    if (error instanceof Error) core.setFailed(error.message)
-  }
+  await run({linear})
 }
 
-run()
+main()
