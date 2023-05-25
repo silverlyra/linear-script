@@ -24,7 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@linear/sdk": "^3.0.0",
-    "github-script-action": "^0.1.0"
+    "github-script-action": "^0.2.1"
   },
   "devDependencies": {
     "@types/node": "^18.15.13",
