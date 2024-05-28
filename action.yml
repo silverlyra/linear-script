@@ -37,5 +37,5 @@ inputs:
     description: Directory to change into
     default: '.'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'

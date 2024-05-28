@@ -11,4 +11,4 @@ async function main(): Promise<void> {
   await run({linear})
 }
 
-main()
+main().catch(core.setFailed) // eslint-disable-line github/no-then

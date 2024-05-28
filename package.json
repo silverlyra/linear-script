@@ -24,16 +24,16 @@
   "license": "MIT",
   "dependencies": {
     "@linear/sdk": "^3.0.0",
-    "github-script-action": "^0.2.1"
+    "github-script-action": "^0.2.2"
   },
   "devDependencies": {
-    "@types/node": "^18.15.13",
-    "@typescript-eslint/parser": "^5.59.0",
-    "@vercel/ncc": "^0.36.1",
-    "eslint": "^8.38.0",
-    "eslint-plugin-github": "^4.7.0",
+    "@types/node": "^20",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vercel/ncc": "^0.38.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-github": "^5.0.0-2",
     "js-yaml": "^4.1.0",
-    "prettier": "^2.8.7",
-    "typescript": "^5.0.4"
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
   }
 }
